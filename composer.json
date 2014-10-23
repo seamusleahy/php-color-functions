@@ -1,0 +1,14 @@
+{
+    "name": "seamusleahy/color-functions",
+    "description": "Color functions in PHP",
+    "require-dev": {
+        "phpunit/phpunit": "~4.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "seamusleahy",
+            "email": "seamus@seamusleahy.com"
+        }
+    ]
+}
