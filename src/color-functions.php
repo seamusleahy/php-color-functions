@@ -255,6 +255,7 @@ function color_rgb_to_hsl( $r, $g, $b ) {
 	$delta = $Cmax - $Cmin;
 
 	// Hue calculation
+	$H = 0;
 	if ( $delta == 0 ) {
 		$H = 0;
 	} elseif ( $delta == $rP ) {
@@ -363,11 +364,11 @@ function color_rgb_to_hsv( $r, $g, $b ) {
 		$H = 0;
 	} else {
 		if ( $Cmax == $rP ) {
-			$H = 60 * (($gP - $bP)/ $delta % 6);
+			$H = 60 * (($gP - $bP) / $delta + ($gP < $bP ? 6 : 0));
 		} elseif ( $Cmax == $gP ) {
-			$H = 60 * (($bP - $rP)/ $delta + 2);
+			$H = 60 * (($bP - $rP) / $delta + 2);
 		} elseif ( $Cmax == $bP ) {
-			$H = 60 * (($rP - $gP)/ $delta +4);
+			$H = 60 * (($rP - $gP) / $delta +4);
 		}
 	}
 
